@@ -10,6 +10,6 @@ while (array[i])
 {
 free(array[i]);
 i++;
-}	
+}
 free(array);
 }
