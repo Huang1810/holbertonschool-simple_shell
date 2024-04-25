@@ -15,7 +15,7 @@ path = pathfinder();
 while (1)
 {
 if (isatty(STDIN_FILENO))
-printf("#cisfun$ ");
+printf("$ ");
 my_prompt = _getline();
 if (!my_prompt)
 {
