@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "main.h"
 /**
 * pathfinder - function to locate file in the path
@@ -8,11 +6,8 @@
 
 char **pathfinder(void)
 {
-char **array = NULL;
-char **environment = malloc(10000);
-char *temp = NULL;
+char **array = NULL, **environment = malloc(10000), *temp = NULL;
 int i, j = 0, num = 0;
-	
 while (environ[j])
 {
 environment[j] = malloc(strlen(environ[j]) + 1);
