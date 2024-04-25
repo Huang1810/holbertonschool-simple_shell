@@ -1,24 +1,29 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stddef.h>
+
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+#include <sys/stat.h>
+#include <errno.h>
+#include <limits.h>
 
-/* global variable */
 extern char **environ;
 
-/* function prototypes */
-char **splitter(char *str, char *delim);
+void prompt(void);
 char *_getline(void);
-char **pathfinder(void);
-void executer(char *command, char **array);
-void environ_printer(void);
-void array_cleaner(char **array);
-void exit_shell(int status);
-void env_shell(char *env_var);
+int exec(char **token, char **argv, int path);
+char **_strtok(char *line);
+int main(int argc, char **argv);
+int builtin(char **token);
+int print_env(char **token);
+int eof(char **token);
+int exit_function(char **token);
+int _strlen(char *line);
 
 #endif

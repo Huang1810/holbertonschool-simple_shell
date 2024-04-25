@@ -48,19 +48,8 @@ When a process is created, the PPID of the new process is set to the PID of the 
 
 -Processes can indeed be generated using system calls such as fork() in the C programming language. The fork() system call initiates the creation of a new process by duplicating the existing or calling process.
 
--**What are the three prototypes of shell**
 
--The three prototypes of the `shell.c` function in C are:
-    -char **splitter(char *str, char *delim);
-    -char *_getline(void);
-    -char **pathfinder(void);
-    -void executer(char *command, char **array);
-    -void environ_printer(void);
-    -void array_cleaner(char **array);
-    -void exit_shell(int status);
-    -void env_shell(char *env_var);
-
--How does the shell use the `PATH` to find the programs**
+-**How does the shell use the `PATH` to find the programs**
 
 -The shell relies on the PATH environment variable to locate executable files. Upon receiving a command, the shell scans through the directories specified in the PATH to locate the executable file associated with that command.
 
